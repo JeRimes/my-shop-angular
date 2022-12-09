@@ -15,7 +15,8 @@
                     <div class="productColor">{{item.specifications.color}} </div>
 
                 </div>
-                <button class="add-Cart" (click)="addToCart(item.id)">
+                <button (mouseenter)="eventTitleProduct(item.name)" (mouseleave)="eventTitleProduct('')"
+                    class="add-Cart" (click)="addToCart(item.id)">
                     ajouter
                 </button>
             </div>

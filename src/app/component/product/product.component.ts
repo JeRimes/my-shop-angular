@@ -33,9 +33,8 @@ export class ProductComponent implements OnInit {
     this.titleProductEvent.emit(id.toString());
 
   }
-  eventTitleProduct() {
-    console.log("send test");
-    this.titleProductEvent.emit("test");
+  eventTitleProduct(title: string) {
+    this.titleProductEvent.emit(title);
   }
 
   showProductTitle(name: any) {

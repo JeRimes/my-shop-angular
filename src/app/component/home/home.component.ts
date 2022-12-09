@@ -8,8 +8,12 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   title = 'Welcome to my-shop';
   displayTitle(title: string) {
-    console.log(title);
-    this.title = this.title == "" ? 'Welcome to my-shop' : title;
+    if (title == "") {
+      this.title = 'Welcome to my-shop'
+    }
+    else {
+      this.title = title;
+    }
   }
 
 }
