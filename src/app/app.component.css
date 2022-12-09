@@ -61,3 +61,7 @@
   a:hover {
       color: #125699;
   }
+
+  a {
+      font-size: 1.2rem;
+  }

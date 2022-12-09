@@ -6,6 +6,7 @@ import { ProductComponent } from './component/product/product.component';
 import { CartComponent } from './component/cart/cart.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './component/home/home.component';
+import { ProfilComponent } from './component/profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HomeComponent } from './component/home/home.component';
     ProductComponent,
     CartComponent,
     HomeComponent,
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,
