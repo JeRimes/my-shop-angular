@@ -9,7 +9,7 @@
                 <div class="productContent">
                     <h1 class="productName">{{item.name}}</h1>
                     <b>Spécifications</b>
-                    <div class="productPrice">{{item.specifications.price}}</div>
+                    <div class="productPrice">{{item.specifications.price}}{{item.specifications.currency}}</div>
                     <div class="productWeight">{{item.specifications.weight}} </div>
                     <div class="productStorage">{{item.specifications.storage}} </div>
                     <div class="productColor">{{item.specifications.color}} </div>
@@ -17,7 +17,7 @@
                 </div>
                 <button (mouseenter)="eventTitleProduct(item.name)" (mouseleave)="eventTitleProduct('')"
                     class="add-Cart" (click)="addToCart(item.id)">
-                    ajouter
+                    Ajouter
                 </button>
             </div>
         </div>

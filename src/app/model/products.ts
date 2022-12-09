@@ -51,7 +51,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: "Phone 14",
+    name: "iPhone 14",
     specifications: {
       color: "white",
       weight: "250g",

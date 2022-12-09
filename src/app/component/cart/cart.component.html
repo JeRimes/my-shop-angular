@@ -1,9 +1,10 @@
 <div *ngIf="cart.length != 0; else noProductInCart">
-    <h1>Votre panier</h1>
-    <button class="btn-clear-cart" (click)="clearCart()">
-        Supprimer tout le panier
-    </button>
+    <h1 class="title-page">Votre panier</h1>
+
     <div class="productComponent">
+        <button class="btn-clear-cart" (click)="clearCart()">
+            Supprimer tout le panier
+        </button>
         <div class="productsList">
             <div *ngFor="let item of cart" class="product">
                 <div class="cartRow">

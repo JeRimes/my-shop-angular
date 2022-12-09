@@ -1,3 +1,7 @@
+.title-page {
+    text-align: center;
+}
+
 .cartRow {
     display: flex;
     justify-content: space-evenly;
@@ -6,7 +10,7 @@
 .btn-clear-cart {
     margin-left: auto;
     display: block;
-    margin-right: auto;
+    margin-right: 250px;
     margin-bottom: 50px;
 }
 
