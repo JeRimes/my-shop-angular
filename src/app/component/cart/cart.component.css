@@ -10,9 +10,6 @@
     margin-bottom: 50px;
 }
 
-.productComponent {
-    width: 90vw;
-}
 
 .productsList {
     display: flex;
@@ -78,6 +75,22 @@ button:hover {
     gap: 10px;
 }
 
+.resumeCartContainer {
+    display: flex;
+    justify-content: center;
+
+}
+
 .resumeCart {
-    margin-left: 13vw;
+    display: flex;
+    flex-direction: column;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    padding: 30px 80px;
+    border-radius: 10px;
+    margin: 100px 0 200px 30px;
+}
+
+hr {
+    margin-top: 50px;
 }

@@ -84,7 +84,5 @@ export class CartComponent implements OnInit {
   clearCart() {
     localStorage.clear();
     this.cart.splice(0, this.cart.length);
-    console.log(localStorage.getItem('productCart'));
-    console.log("clear local storage !");
   }
 }
