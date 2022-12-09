@@ -1,1 +1,31 @@
 <p>cart works!</p>
+
+<div class="productComponent">
+
+    <div class="productsList">
+        <div *ngFor="let item of products" class="product">
+            <div class="productContainer">
+                <div class="productPhoto">
+                    <img [src]="item.picture" alt="">
+                </div>
+                <div class="productContent">
+                    <h1 class="productName">{{item.name}}</h1>
+                    <b>Spécifications</b>
+                    <div class="productPrice">{{item.specifications.price}}</div>
+                    <div class="productWeight">{{item.specifications.weight}} </div>
+                    <div class="productStorage">{{item.specifications.storage}} </div>
+                    <div class="productColor">{{item.specifications.color}} </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="add-Cart" (click)="getCart()">
+    avoir le panier
+</button>
+
+<button class="clear-cart" (click)="clearCart()">
+    clear cart
+</button>

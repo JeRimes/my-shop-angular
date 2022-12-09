@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { of } from 'rxjs';
 import { products } from '../../model/products'
 @Component({
   selector: 'app-product',
@@ -11,7 +10,6 @@ export class ProductComponent implements OnInit {
   products = products;
 
   ngOnInit() {
-
   }
 
   addToCart(id: number) {
