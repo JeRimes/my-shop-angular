@@ -1,25 +1,27 @@
-<div class="productsList">
-    <div *ngFor="let item of products" class="product">
-        <div class="productPhoto">
-            <img [src]="item.picture" alt="">
+<div class="productComponent">
+
+    <div class="productsList">
+        <div *ngFor="let item of products" class="product">
+            <div class="productContainer">
+                <div class="productPhoto">
+                    <img [src]="item.picture" alt="">
+                </div>
+                <div class="productContent">
+                    <h1 class="productName">{{item.name}}</h1>
+                    <b>Spécifications</b>
+                    <div class="productPrice">{{item.specifications.price}}</div>
+                    <div class="productWeight">{{item.specifications.weight}} </div>
+                    <div class="productStorage">{{item.specifications.storage}} </div>
+                    <div class="productColor">{{item.specifications.color}} </div>
+
+                </div>
+                <button class="add-Cart" (click)="addToCart(item.id)">
+                    ajouter
+                </button>
+            </div>
         </div>
-        <div class="productContent">
-            <div class="productName">{{item.name}}</div>
-            <div class="productPrice">{{item.specifications.price}} €</div>
-            <div class="productWeight">{{item.specifications.weight}} </div>
-            <div class="productStorage">{{item.specifications.storage}} </div>
-            <div class="productColor">{{item.specifications.color}} </div>
-
-            <button class="addToCart" (click)="addToCart(item.id)">
-                ajouter
-            </button>
-
-
-        </div>
-
-
     </div>
-    <button class="addToCart" (click)="clearCart()">
+    <button class="clear-cart" (click)="clearCart()">
         clear cart
     </button>
 </div>
