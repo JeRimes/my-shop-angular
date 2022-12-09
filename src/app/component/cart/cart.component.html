@@ -26,11 +26,12 @@
                     <div class="quantity-column">
                         <b>Quantité : {{item.quantity}}</b>
                         <div class="quantity-column-action">
-                            <button class="" (click)="addQuantity(item.product.id)">
-                                +
-                            </button>
+
                             <button class="" (click)="minusQuantity(item.product.id)">
                                 -
+                            </button>
+                            <button class="" (click)="addQuantity(item.product.id)">
+                                +
                             </button>
                         </div>
 
