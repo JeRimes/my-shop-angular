@@ -8,7 +8,8 @@ export const products: Product[] = [
       color: "black",
       weight: "250g",
       storage: "256GB",
-      price: "1000$"
+      price: 1000,
+      currency: "$"
     },
     picture: "/assets/images/iphone12.png"
   },
@@ -19,7 +20,8 @@ export const products: Product[] = [
       color: "white",
       weight: "50g",
       storage: "N/A",
-      price: "200$"
+      price: 200,
+      currency: "$"
     },
     picture: "/assets/images/airpods.png"
   },
@@ -30,7 +32,8 @@ export const products: Product[] = [
       color: "black",
       weight: "250g",
       storage: "512GB",
-      price: "900$"
+      price: 900,
+      currency: "$"
     },
     picture: "/assets/images/samsung22.png"
   },
@@ -41,7 +44,8 @@ export const products: Product[] = [
       color: "black",
       weight: "250g",
       storage: "256GB",
-      price: "950$"
+      price: 950,
+      currency: "$"
     },
     picture: "/assets/images/samsungnote10.png"
   },
@@ -52,7 +56,8 @@ export const products: Product[] = [
       color: "white",
       weight: "250g",
       storage: "256GB",
-      price: "1300$"
+      price: 1300,
+      currency: "$"
     },
     picture: "/assets/images/iphone14.png"
   }

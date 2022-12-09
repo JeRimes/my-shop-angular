@@ -1,31 +1,66 @@
-<p>cart works!</p>
+<div *ngIf="cart.length != 0; else noProductInCart">
+    <h1>Votre panier</h1>
+    <button class="btn-clear-cart" (click)="clearCart()">
+        Supprimer tout le panier
+    </button>
+    <div class="productComponent">
+        <div class="productsList">
+            <div *ngFor="let item of cart" class="product">
+                <div class="cartRow">
 
-<div class="productComponent">
+                    <div class="productContainer">
+                        <div class="productPhoto">
+                            <img [src]="item.product.picture" alt="">
+                        </div>
+                        <div class="productContent">
+                            <h1 class="productName">{{item.product.name}}</h1>
+                            <b>Spécifications</b>
+                            <div class="productPrice">
+                                {{item.product.specifications.price}}{{item.product.specifications.currency}}</div>
+                            <div class="productWeight">{{item.product.specifications.weight}} </div>
+                            <div class="productStorage">{{item.product.specifications.storage}} </div>
+                            <div class="productColor">{{item.product.specifications.color}} </div>
+                        </div>
 
-    <div class="productsList">
-        <div *ngFor="let item of products" class="product">
-            <div class="productContainer">
-                <div class="productPhoto">
-                    <img [src]="item.picture" alt="">
-                </div>
-                <div class="productContent">
-                    <h1 class="productName">{{item.name}}</h1>
-                    <b>Spécifications</b>
-                    <div class="productPrice">{{item.specifications.price}}</div>
-                    <div class="productWeight">{{item.specifications.weight}} </div>
-                    <div class="productStorage">{{item.specifications.storage}} </div>
-                    <div class="productColor">{{item.specifications.color}} </div>
+                    </div>
+                    <div class="quantity-column">
+                        <b>Quantité : {{item.quantity}}</b>
+                        <div class="quantity-column-action">
+                            <button class="" (click)="addQuantity(item.product.id)">
+                                +
+                            </button>
+                            <button class="" (click)="minusQuantity(item.product.id)">
+                                -
+                            </button>
+                        </div>
+
+                    </div>
+                    <div>
+                        <b>Prix : {{item.quantity*item.product.specifications.price}}
+                            {{item.product.specifications.currency}}</b>
+                    </div>
+                    <div class="action">
+
+                        <button class="" (click)="removeProductFromCart(item.product.id)">
+                            Supprimer du panier
+                        </button>
+                    </div>
 
                 </div>
             </div>
         </div>
+        <hr />
+        <div class="resumeCart">
+            <div *ngFor="let item of cart">
+                <p>{{item.product.name}} : {{item.quantity*item.product.specifications.price}}
+                    {{item.product.specifications.currency}}</p>
+            </div>
+        </div>
     </div>
+
+
 </div>
-
-<button class="add-Cart" (click)="getCart()">
-    avoir le panier
-</button>
-
-<button class="clear-cart" (click)="clearCart()">
-    clear cart
-</button>
+<ng-template #noProductInCart>
+    <h1>Votre panier est vide</h1>
+    <a routerLink="/Product">Ajouter des produits</a>
+</ng-template>

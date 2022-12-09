@@ -9,5 +9,11 @@ interface Specification {
   color: string;
   weight: string;
   storage: string;
-  price: string;
+  price: number;
+  currency: string;
+}
+
+export interface Cart {
+  product: Product;
+  quantity: number;
 }
