@@ -51,10 +51,12 @@
         </div>
         <hr />
         <div class="resumeCart">
+            <h1>Résumé :</h1>
             <div *ngFor="let item of cart">
-                <p>{{item.product.name}} : {{item.quantity*item.product.specifications.price}}
-                    {{item.product.specifications.currency}}</p>
+                <p>{{item.quantity}} x {{item.product.name}} :
+                    {{item.quantity*item.product.specifications.price}}{{item.product.specifications.currency}}</p>
             </div>
+            <button>Procéder au paiement</button>
         </div>
     </div>
 

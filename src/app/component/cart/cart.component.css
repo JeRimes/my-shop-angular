@@ -77,3 +77,7 @@ button:hover {
     display: flex;
     gap: 10px;
 }
+
+.resumeCart {
+    margin-left: 13vw;
+}
