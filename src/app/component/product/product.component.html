@@ -1,0 +1,25 @@
+<div class="productsList">
+    <div *ngFor="let item of products" class="product">
+        <div class="productPhoto">
+            <img [src]="item.picture" alt="">
+        </div>
+        <div class="productContent">
+            <div class="productName">{{item.name}}</div>
+            <div class="productPrice">{{item.specifications.price}} €</div>
+            <div class="productWeight">{{item.specifications.weight}} </div>
+            <div class="productStorage">{{item.specifications.storage}} </div>
+            <div class="productColor">{{item.specifications.color}} </div>
+
+            <button class="addToCart" (click)="addToCart(item.id)">
+                ajouter
+            </button>
+
+
+        </div>
+
+
+    </div>
+    <button class="addToCart" (click)="clearCart()">
+        clear cart
+    </button>
+</div>
